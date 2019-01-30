@@ -125,9 +125,9 @@ trait Cron {
 		}
 		set_time_limit( 0 );
 		$this->lock_cron_process();
-		$this->do_action( 'before_cron_run', $this->get_hook_name() );
+		$this->do_framework_action( 'before_cron_run', $this->get_hook_name() );
 		$this->execute();
-		$this->do_action( 'after_cron_run', $this->get_hook_name() );
+		$this->do_framework_action( 'after_cron_run', $this->get_hook_name() );
 		$this->set_cron_event();
 		$this->unlock_cron_process();
 	}
