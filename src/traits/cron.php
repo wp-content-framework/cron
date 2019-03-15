@@ -28,10 +28,13 @@ trait Cron {
 	 * initialize
 	 */
 	protected final function initialize() {
-		add_action( $this->get_hook_name(), function () {
-			$this->run();
-		} );
-		$this->set_cron_event();
+		if ( $this->app->utility->doing_cron() ) {
+			add_action( $this->get_hook_name(), function () {
+				$this->run();
+			} );
+		} else {
+			$this->set_cron_event();
+		}
 	}
 
 	/**
