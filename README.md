@@ -14,9 +14,6 @@
 
 ``` composer require wp-content-framework/cron ```  
 
-## 依存モジュール
-* [core](https://github.com/wp-content-framework/core)  
-
 ## cron の追加
 今後追加予定
 
