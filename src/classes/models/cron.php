@@ -11,6 +11,9 @@
 
 namespace WP_Framework_Cron\Classes\Models;
 
+use WP_Framework_Core\Traits\Loader;
+use WP_Framework_Cron\Traits\Package;
+
 if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 	exit;
 }
@@ -21,7 +24,7 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
  */
 class Cron implements \WP_Framework_Core\Interfaces\Loader {
 
-	use \WP_Framework_Core\Traits\Loader, \WP_Framework_Cron\Traits\Package;
+	use Loader, Package;
 
 	/**
 	 * load

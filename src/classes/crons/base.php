@@ -11,6 +11,9 @@
 
 namespace WP_Framework_Cron\Classes\Crons;
 
+use WP_Framework_Cron\Traits\Cron;
+use WP_Framework_Cron\Traits\Package;
+
 if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
 	exit;
 }
@@ -21,6 +24,6 @@ if ( ! defined( 'WP_CONTENT_FRAMEWORK' ) ) {
  */
 abstract class Base implements \WP_Framework_Cron\Interfaces\Cron {
 
-	use \WP_Framework_Cron\Traits\Cron, \WP_Framework_Cron\Traits\Package;
+	use Cron, Package;
 
 }
