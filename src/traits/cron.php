@@ -2,7 +2,6 @@
 /**
  * WP_Framework_Cron Traits Cron
  *
- * @version 0.0.12
  * @author Technote
  * @copyright Technote All Rights Reserved
  * @license http://www.opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2
@@ -32,7 +31,7 @@ trait Cron {
 	/**
 	 * initialize
 	 */
-	protected final function initialize() {
+	final protected function initialize() {
 		if ( $this->app->utility->doing_cron() ) {
 			add_action( $this->get_hook_name(), function () {
 				$this->run();
@@ -86,7 +85,7 @@ trait Cron {
 	 * @return int
 	 */
 	protected function get_interval() {
-		return - 1;
+		return -1;
 	}
 
 	/**
@@ -127,7 +126,7 @@ trait Cron {
 	/**
 	 * run
 	 */
-	public final function run() {
+	final public function run() {
 		if ( $this->is_running_cron_process() ) {
 			return;
 		}
@@ -143,7 +142,7 @@ trait Cron {
 	/**
 	 * run now
 	 */
-	public final function run_now() {
+	final public function run_now() {
 		$this->clear_event();
 		$this->run();
 	}
@@ -152,7 +151,6 @@ trait Cron {
 	 * execute
 	 */
 	protected function execute() {
-
 	}
 
 	/**

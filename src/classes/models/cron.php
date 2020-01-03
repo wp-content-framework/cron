@@ -2,7 +2,6 @@
 /**
  * WP_Framework_Cron Classes Models Cron
  *
- * @version 0.0.12
  * @author Technote
  * @copyright Technote All Rights Reserved
  * @license http://www.opensource.org/licenses/gpl-2.0.php GNU General Public License, version 2
@@ -28,8 +27,9 @@ class Cron implements \WP_Framework_Core\Interfaces\Loader {
 
 	/**
 	 * load
+	 * @noinspection PhpUnusedPrivateMethodInspection
+	 * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
 	 */
-	/** @noinspection PhpUnusedPrivateMethodInspection */
 	private function load() {
 		$this->get_class_list();
 	}
