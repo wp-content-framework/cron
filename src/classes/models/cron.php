@@ -27,8 +27,9 @@ class Cron implements \WP_Framework_Core\Interfaces\Loader {
 
 	/**
 	 * load
+	 * @noinspection PhpUnusedPrivateMethodInspection
+	 * @SuppressWarnings(PHPMD.UnusedPrivateMethod)
 	 */
-	/** @noinspection PhpUnusedPrivateMethodInspection */
 	private function load() {
 		$this->get_class_list();
 	}
